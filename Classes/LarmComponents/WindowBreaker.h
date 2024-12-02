@@ -1,13 +1,13 @@
+#ifndef WINDOWBREAKER_H
+#define WINDOWBREAKER_H
 #include <string>
+#include "LarmComponent.h"
 
-class WindowBreaker
+class WindowBreaker : LarmComponent
 {
-private:
-    int amount;
-
 public:
-WindowBreaker(int amount) : amount(amount){}
-    std::string DetectAlarm()
-    {
-    }
+    WindowBreaker(int componentId, int customerId) : LarmComponent(customerId, componentId) {}
+
+    std::string DetectAlarm() override;
 };
+#endif // WINDOWBREAKER_H

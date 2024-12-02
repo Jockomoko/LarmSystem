@@ -1,3 +1,5 @@
+#ifndef SMOKEDETECTOR_H
+#define SMOKEDETECTOR_H
 #include <string>
 
 class SmokeDetector
@@ -11,3 +13,4 @@ SmokeDetector(int amount) : amount(amount){}
     {
     }
 };
+#endif // SMOKEDETECTOR_H

@@ -1,13 +1,18 @@
+#ifndef LARMCOMPONENT_H
+#define LARMCOMPONENT_H
+#include <string>
 class LarmComponent
 {
-    private:
-int component_id;
-int customer_id;
-bool  is_activeComponent;
-bool is_ConnectedComponent;
+private:
+    int componentId;
+    int customerId;
+    bool is_activeComponent;
+    bool is_ConnectedComponent;
 
-    public:
-    LarmComponent(int customer_id) : customer_id(customer_id){
-        
+public:
+    LarmComponent(int customerId, int componentId) : customerId(customerId), componentId(componentId)
+    {
     }
+    virtual std::string DetectAlarm();
 };
+#endif // LARMCOMPONENT_H

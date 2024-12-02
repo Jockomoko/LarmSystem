@@ -1,3 +1,5 @@
+#ifndef DOORBREAKER_H
+#define DOORBREAKER_H
 #include <string>
 class DoorBreaker
 {
@@ -10,3 +12,4 @@ class DoorBreaker
 
     }
 };
+#endif // DOORBREAKER_H
