@@ -2,17 +2,20 @@
 #define JSONHANDLER_H
 #include <string>
 #include <fstream>
+#include <iostream>
+#include "json.hpp"
 #include "customer.h"
+
+using namespace nlohmann;
 
 class JsonHandler
 {
 public:
-    nlohmann::json parseJSON();
-    void writeJSON(const nlohmann::json &jsonData);
+    json parseJSON();
+    // void writeJSON(const json &jsonData);
     std::vector<Customer> parseCustomers();
 
 private:
     std::string filePath = "..//DataBase/Customer.json";
-    nlohmann::json jsonData;
 };
 #endif // JSONHANDLER_H

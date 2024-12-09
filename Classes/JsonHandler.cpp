@@ -1,8 +1,8 @@
 #include "JsonHandler.h"
-#include <json.hpp>
 
 nlohmann::json JsonHandler::parseJSON()
 {
+    json jsonData;
     std::ifstream file(filePath);
     file >> jsonData;
     file.close();
@@ -11,12 +11,12 @@ nlohmann::json JsonHandler::parseJSON()
 
 std::vector<Customer> JsonHandler::parseCustomers()
 {
-    parseJSON();
+    json customerData = parseJSON();
 
     std::vector<Customer> customers;
-    if (!jsonData.empty())
+    if (!customerData.empty())
     {
-        for (auto customer : jsonData["Customers"])
+        for (auto customer : customerData["Customers"])
         {
             int id = customer["id"].get<int>();
             std::string name = customer["name"].get<std::string>();
@@ -47,9 +47,9 @@ std::vector<Customer> JsonHandler::parseCustomers()
         std::cout << "No data in file" << std::endl;
     }
 }
-void JsonHandler::writeJSON(const nlohmann::json &jsonData)
-{
-    std::ofstream file(filePath);
-    file << jsonData.dump(4);
-    file.close();
-};
+// void JsonHandler::writeJSON(const nlohmann::json &jsonData)
+// {
+//     std::ofstream file(filePath);
+//     file << jsonData.dump(4);
+//     file.close();
+// };
