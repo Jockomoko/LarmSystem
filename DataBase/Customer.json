@@ -1,0 +1,357 @@
+[
+    {
+        "id": 1,
+        "name": "Lasses Snickerier AB",
+        "users": [
+            {
+                "userId": 1,
+                "customerId": 1,
+                "name": "Lasse",
+                "password": "12345"
+            }
+        ],
+        "larmComponents": {
+            "componentId": 1,
+            "customerId": 1,
+            "type": "SmokeDetector",
+            "isActiveComponent": false,
+            "isConnectedComponent": false
+        }
+    },
+    {
+        "id": 2,
+        "name": "Example Company",
+        "users": [
+            {
+                "userId": 2,
+                "customerId": 2,
+                "name": "John Doe",
+                "password": "password"
+            },
+            {
+                "userId": 3,
+                "customerId": 2,
+                "name": "Jane Doe",
+                "password": "password123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 2,
+                "customerId": 2,
+                "type": "SmokeDetector",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            },
+            {
+                "componentId": 3,
+                "customerId": 2,
+                "type": "DoorBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": false
+            },
+            {
+                "componentId": 4,
+                "customerId": 2,
+                "type": "WindowBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Tech Solutions Inc",
+        "users": [
+            {
+                "userId": 4,
+                "customerId": 3,
+                "name": "Alice",
+                "password": "alice123"
+            },
+            {
+                "userId": 5,
+                "customerId": 3,
+                "name": "Bob",
+                "password": "bob123"
+            },
+            {
+                "userId": 6,
+                "customerId": 3,
+                "name": "Charlie",
+                "password": "charlie123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 5,
+                "customerId": 3,
+                "type": "SmokeDetector",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Green Energy Ltd",
+        "users": [
+            {
+                "userId": 7,
+                "customerId": 4,
+                "name": "David",
+                "password": "david123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 6,
+                "customerId": 4,
+                "type": "DoorBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": false
+            },
+            {
+                "componentId": 7,
+                "customerId": 4,
+                "type": "WindowBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Auto Parts Co",
+        "users": [
+            {
+                "userId": 8,
+                "customerId": 5,
+                "name": "Eve",
+                "password": "eve123"
+            },
+            {
+                "userId": 9,
+                "customerId": 5,
+                "name": "Frank",
+                "password": "frank123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 8,
+                "customerId": 5,
+                "type": "SmokeDetector",
+                "isActiveComponent": false,
+                "isConnectedComponent": false
+            },
+            {
+                "componentId": 9,
+                "customerId": 5,
+                "type": "DoorBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "HealthCare Inc",
+        "users": [
+            {
+                "userId": 10,
+                "customerId": 6,
+                "name": "Grace",
+                "password": "grace123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 10,
+                "customerId": 6,
+                "type": "WindowBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Foodies Ltd",
+        "users": [
+            {
+                "userId": 11,
+                "customerId": 7,
+                "name": "Hank",
+                "password": "hank123"
+            },
+            {
+                "userId": 12,
+                "customerId": 7,
+                "name": "Ivy",
+                "password": "ivy123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 11,
+                "customerId": 7,
+                "type": "SmokeDetector",
+                "isActiveComponent": false,
+                "isConnectedComponent": false
+            },
+            {
+                "componentId": 12,
+                "customerId": 7,
+                "type": "DoorBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            },
+            {
+                "componentId": 13,
+                "customerId": 7,
+                "type": "WindowBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Logistics Corp",
+        "users": [
+            {
+                "userId": 13,
+                "customerId": 8,
+                "name": "Jack",
+                "password": "jack123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 14,
+                "customerId": 8,
+                "type": "SmokeDetector",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Retailers Inc",
+        "users": [
+            {
+                "userId": 14,
+                "customerId": 9,
+                "name": "Kate",
+                "password": "kate123"
+            },
+            {
+                "userId": 15,
+                "customerId": 9,
+                "name": "Leo",
+                "password": "leo123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 15,
+                "customerId": 9,
+                "type": "DoorBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": false
+            },
+            {
+                "componentId": 16,
+                "customerId": 9,
+                "type": "WindowBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Manufacturing Co",
+        "users": [
+            {
+                "userId": 16,
+                "customerId": 10,
+                "name": "Mia",
+                "password": "mia123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 17,
+                "customerId": 10,
+                "type": "SmokeDetector",
+                "isActiveComponent": false,
+                "isConnectedComponent": false
+            },
+            {
+                "componentId": 18,
+                "customerId": 10,
+                "type": "DoorBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Consulting Group",
+        "users": [
+            {
+                "userId": 17,
+                "customerId": 11,
+                "name": "Nina",
+                "password": "nina123"
+            },
+            {
+                "userId": 18,
+                "customerId": 11,
+                "name": "Oscar",
+                "password": "oscar123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 19,
+                "customerId": 11,
+                "type": "WindowBreaker",
+                "isActiveComponent": false,
+                "isConnectedComponent": true
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Finance Solutions",
+        "users": [
+            {
+                "userId": 19,
+                "customerId": 12,
+                "name": "Paul",
+                "password": "paul123"
+            }
+        ],
+        "larmComponents": [
+            {
+                "componentId": 20,
+                "customerId": 12,
+                "type": "SmokeDetector",
+                "isActiveComponent": false,
+                "isConnectedComponent": false
+            },
+            {
+                "componentId": 21,
+                "customerId": 12,
+                "type": "DoorBreaker",
+                "isActiveComponent": true,
+                "isConnectedComponent": true
+            }
+        ]
+    }
+]
