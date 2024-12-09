@@ -1,6 +1,7 @@
 #ifndef LARMCOMPONENT_H
 #define LARMCOMPONENT_H
-#include <string>
+#include <iostream>
+
 class LarmComponent
 {
 private:
@@ -12,13 +13,13 @@ private:
 public:
     LarmComponent(int componentId, int customerId, bool isActiveComponent, bool isConnectedComponent);
 
-    //Getters
+    // Getters
     int getComponentId();
     int getCustomerId();
     bool getActiveComponent();
     bool getConnectedComponent();
 
-    //Setters
+    // Setters
     void setActiveComponent(bool isActive);
     void setConnectedCompont(bool isConnected);
     virtual std::string DetectAlarm();
