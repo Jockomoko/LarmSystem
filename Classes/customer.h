@@ -9,7 +9,7 @@
 class Customer
 {
 public:
-    Customer(const std::string &name, int id);
+    Customer(int id, const std::string &name);
 
     // Getters
     std::string getName() const;
@@ -23,8 +23,8 @@ public:
     void addLarmComponent(const LarmComponent &larmComponent);
 
 private:
-    std::string name;
     int id;
+    std::string name;
     std::vector<User> users;
     std::vector<LarmComponent> larmComponents;
 };
