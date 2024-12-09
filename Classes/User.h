@@ -14,7 +14,7 @@ public:
     User(int userId, int customerId, std::string &name, std::string &password);
     
     //Getters
-     int getId() const;
+     int getUserId() const;
      int getCustomerId() const;
      std::string getName() const;
      std::string getPassWord() const;
