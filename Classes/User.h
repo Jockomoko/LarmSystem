@@ -6,16 +6,20 @@ class User
 {
 private:
     int userId;
+    int customerId;
     std::string name;
     std::string password;
 
 public:
-    User(std::string &name, std::string &password) : name(name), password(password){}
+    User(int userId, int customerId, std::string &name, std::string &password);
     
+    //Getters
+     int getId() const;
+     int getCustomerId() const;
      std::string getName() const;
      std::string getPassWord() const;
-     int getId() const;
     
+    //Setters
     void setName(const std::string &newName);
     void setPassword(const std::string &newPassword);
 

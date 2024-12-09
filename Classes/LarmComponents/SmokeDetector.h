@@ -1,16 +1,12 @@
 #ifndef SMOKEDETECTOR_H
 #define SMOKEDETECTOR_H
 #include <string>
+#include "LarmComponent.h"
 
-class SmokeDetector
+class SmokeDetector : LarmComponent
 {
-private:
-    int amount;
-
 public:
-SmokeDetector(int amount) : amount(amount){}
-    std::string DetectAlarm()
-    {
-    }
+SmokeDetector(int componentId, int customerId, bool isActiveComponent, bool isConnectedComponent);
+    std::string DetectAlarm() override;
 };
 #endif // SMOKEDETECTOR_H

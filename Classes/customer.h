@@ -19,7 +19,6 @@ public:
 
     // Setters
     void setName(const std::string &name);
-    void setId(int id);
     void addUser(const User &user);
     void addLarmComponent(const LarmComponent &larmComponent);
 

@@ -6,7 +6,7 @@
 class WindowBreaker : LarmComponent
 {
 public:
-    WindowBreaker(int componentId, int customerId) : LarmComponent(customerId, componentId) {}
+    WindowBreaker(int componentId, int customerId, bool isActiveComponent, bool isConnectedComponent);
 
     std::string DetectAlarm() override;
 };

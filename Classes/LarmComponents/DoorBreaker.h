@@ -1,15 +1,12 @@
 #ifndef DOORBREAKER_H
 #define DOORBREAKER_H
 #include <string>
-class DoorBreaker
-{
-    private:
-    int amount;
-    public:
-    DoorBreaker(int amount) : amount(amount){}
-    std::string DetectAlarm()
-    {
+#include "LarmComponent.h"
 
-    }
+class DoorBreaker : LarmComponent
+{
+    public:
+    DoorBreaker(int componentId, int customerId, bool isActiveComponent, bool isConnectedComponent);
+    std::string DetectAlarm() override;
 };
 #endif // DOORBREAKER_H
