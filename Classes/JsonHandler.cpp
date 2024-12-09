@@ -1,49 +1,55 @@
 #include "JsonHandler.h"
 #include <json.hpp>
 
-JsonHandler::JsonHandler() : json("") {}
-
-std::string JsonHandler::createJson()
+nlohmann::json JsonHandler::parseJSON()
 {
-    Json::Value root;
-    // Add data to root
-    Json::StreamWriterBuilder writer;
-    json = Json::writeString(writer, root);
-    return json;
+    std::ifstream file(filePath);
+    file >> jsonData;
+    file.close();
+    return jsonData;
 }
 
-std::vector<Customer> JsonHandler::readJson(const std::string &json)
+std::vector<Customer> JsonHandler::parseCustomers()
 {
+    parseJSON();
+
     std::vector<Customer> customers;
-    Json::CharReaderBuilder reader;
-    Json::Value root;
-    std::string errs;
-    std::istringstream s(json);
-    std::string errs;
-    if (Json::parseFromStream(reader, s, &root, &errs))
+    if (!jsonData.empty())
     {
-        for (const auto &customer : root["customers"])
+        for (auto customer : jsonData["Customers"])
         {
-            Customer c;
-            c.name = customer["name"].asString();
-            c.id = customer["id"].asInt();
-            customers.push_back(c);
+            int id = customer["id"].get<int>();
+            std::string name = customer["name"].get<std::string>();
+            Customer newCustomer(id, name);
+            for (const auto user : customer["users"])
+            {
+                int userId = user["userId"].get<int>();
+                int customerId = user["customerId"].get<int>();
+                std::string userName = user["name"].get<std::string>();
+                std::string password = user["password"].get<std::string>();
+                User newUser(userId, customerId, userName, password);
+                newCustomer.addUser(newUser);
+            }
+            for (const auto larmComponent : customer["larmComponents"])
+            {
+                int componentId = larmComponent["componentId"].get<int>();
+                int customerId = larmComponent["customerId"].get<int>();
+                bool isActiveComponent = larmComponent["isActiveComponent"].get<bool>();
+                bool isConnectedComponent = larmComponent["isConnectedComponent"].get<bool>();
+                LarmComponent newLarmComponent(componentId, customerId, isActiveComponent, isConnectedComponent);
+                newCustomer.addLarmComponent(newLarmComponent);
+            }
+            customers.push_back(newCustomer);
         }
     }
-    return customers;
-}
-
-bool JsonHandler::writeToJson(std::vector<Customer> customers)
-{
-    Json::Value root;
-    for (const auto &customer : customers)
+    else
     {
-        Json::Value c;
-        c["name"] = customer.name;
-        c["id"] = customer.id;
-        root["customers"].append(c);
+        std::cout << "No data in file" << std::endl;
     }
-    Json::StreamWriterBuilder writer;
-    json = Json::writeString(writer, root);
-    return true;
 }
+void JsonHandler::writeJSON(const nlohmann::json &jsonData)
+{
+    std::ofstream file(filePath);
+    file << jsonData.dump(4);
+    file.close();
+};
